@@ -8,8 +8,8 @@ RUN git clone https://github.com/Dr-Djibi/Menma-Session.git /menma_session
 
 WORKDIR /menma_session
 
-RUN npm install --production
+RUN npm install
 
 EXPOSE 3000
 
-CMD ["node", "index.js"]
+CMD ["npm", "start"]
