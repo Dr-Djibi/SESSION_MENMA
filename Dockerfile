@@ -13,7 +13,12 @@ RUN wget -q https://github.com/Dr-Djibi/Menma-Session/archive/refs/heads/main.zi
 WORKDIR /menma_session
 
 RUN npm install
+RUN npm run build
+
+ENV NODE_ENV=production
+ENV PORT=3000
 
 EXPOSE 3000
 
 CMD ["npm", "start"]
+
